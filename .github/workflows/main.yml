@@ -15,8 +15,6 @@ jobs:
         with:
           build: yarn cypress info
           start: npx cypress run --record --key c9c0020d-9850-473e-a066-8cfc8d159c08
-          wait-on: "http://localhost:3000"
-          wait-on-timeout: 120
           browser: chrome
           record: true
           parallel: true

@@ -7,4 +7,8 @@ describe('template spec', () => {
     cy.visit('https://example.cypress.io')
   })
 
+  it('third test', () => {
+    cy.visit('https://example.cypress.io')
+  })
+
 })

@@ -13,9 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: yarn cypress info
-          start: npx cypress run --record --key c9c0020d-9850-473e-a066-8cfc8d159c08
-          group: "UI - Chrome"
+          record: true
         env:
           CYPRESS_PROJECT_ID: "hxx5i3"
           CYPRESS_RECORD_KEY: "c9c0020d-9850-473e-a066-8cfc8d159c08"

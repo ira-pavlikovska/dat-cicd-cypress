@@ -13,5 +13,17 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          build: yarn cypress info
+          start: yarn start:ci
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          parallel: true
+          group: "UI - Chrome"
+          spec: cypress/e2e/*
+          config-file: cypress.config.ts
+        env:
+          CYPRESS_PROJECT_ID: "hxx5i3"
+          CYPRESS_RECORD_KEY: "c9c0020d-9850-473e-a066-8cfc8d159c08"
+          DEBUG: "cypress:server:args"

@@ -14,7 +14,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: yarn cypress info
-          start: yarn start:ci
+          start: npx cypress run --record --key c9c0020d-9850-473e-a066-8cfc8d159c08
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: chrome
